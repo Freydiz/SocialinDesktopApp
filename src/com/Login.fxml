@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LoginController">
+   <children>
+      <TextField fx:id="txtEmail" layoutX="207.0" layoutY="169.0" promptText="E-mail" />
+      <PasswordField fx:id="txtPassword" layoutX="207.0" layoutY="214.0" promptText="Password" />
+      <Button fx:id="btnLogin" layoutX="272.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnLoginAction" text="Login" />
+      <Label fx:id="lblIsConnected" alignment="CENTER" layoutX="264.0" layoutY="128.0" prefHeight="27.0" prefWidth="73.0" />
+      <Hyperlink fx:id="hplSignUp" layoutX="270.0" layoutY="326.0" onAction="#hplSignUpAction" text="Sign up" />
+      <Label fx:id="lblErrorMessage" alignment="CENTER" layoutX="150.0" layoutY="305.0" prefHeight="17.0" prefWidth="300.0" textFill="#ff0000" wrapText="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="201.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

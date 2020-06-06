@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneMyEvents" prefHeight="675.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MyEventsController">
+    <children>
+         <Button fx:id="btnHome" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnHomeAction" text="Home" />
+        <Button fx:id="btnMyEvents" layoutX="567.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnMyEventsAction" prefHeight="31.0" prefWidth="91.0" text="My events" />
+        <Button fx:id="btnProfile" layoutX="666.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnProfileAction" text="Profile" />
+        <Button fx:id="btnLogOut" layoutX="735.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnLogOutAction" text="Log out" />
+        
+        
+        <ImageView fitHeight="199.0" fitWidth="318.0" layoutX="246.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+        <TableView fx:id="tViewMyEvents" layoutX="28.0" layoutY="238.0" prefHeight="160.0" prefWidth="751.0">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="379.0" text="Title" />
+                <TableColumn fx:id="colDate" minWidth="9.0" prefWidth="170.0" text="Date" />
+                <TableColumn fx:id="colCity" prefWidth="201.0" text="City" />
+                
+            </columns>
+        </TableView>
+      <TableView fx:id="tViewMyEventsGuest" layoutX="30.0" layoutY="453.0" prefHeight="160.0" prefWidth="751.0">
+         <columns>
+            <TableColumn fx:id="colGName" prefWidth="283.0" text="Title" />
+            <TableColumn fx:id="colGDate" minWidth="9.0" prefWidth="151.0" text="Date" />
+            <TableColumn fx:id="colGCity" prefWidth="155.0" text="City" />
+            <TableColumn fx:id="colGHostName" prefWidth="161.0" text="Host" />
+         </columns>
+      </TableView>
+      <Label fx:id="lblErrorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="628.0" prefHeight="21.0" prefWidth="377.0" textAlignment="CENTER" />
+      <Label contentDisplay="CENTER" layoutX="41.0" layoutY="195.0" prefHeight="41.0" prefWidth="280.0" text="Events I am hosting" textAlignment="CENTER" />
+      <Label contentDisplay="CENTER" layoutX="41.0" layoutY="409.0" prefHeight="41.0" prefWidth="280.0" text="Events I am attending" textAlignment="CENTER" />
+      <Button fx:id="btnCreateEvent" layoutX="649.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnCreateEventAction" prefHeight="31.0" prefWidth="122.0" text="Create Event" />
+      <Button fx:id="btnSearchEvent" layoutX="649.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnSearchEventAction" prefHeight="31.0" prefWidth="122.0" text="Search Event" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneSearch" prefHeight="675.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SearchController">
+    <children>
+         <Button fx:id="btnHome" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#btnHomeAction" text="Home" />
+        <Button fx:id="btnMyEvents" layoutX="567.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnMyEventsAction" prefHeight="31.0" prefWidth="91.0" text="My events" />
+        <Button fx:id="btnProfile" layoutX="666.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnProfileAction" text="Profile" />
+        <Button fx:id="btnLogOut" layoutX="735.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnLogOutAction" text="Log out" />
+        
+        
+        <TextField fx:id="txtSearchEvent" layoutX="151.0" layoutY="236.0" prefHeight="27.0" prefWidth="255.0" promptText="Search: City, address, name ..." />
+        <Button fx:id="btnSearchEvent" alignment="CENTER" defaultButton="true" layoutX="28.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnSearchEventAction" prefHeight="27.0" prefWidth="106.0" style="fx-bor: null;" text="Search">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="199.0" fitWidth="318.0" layoutX="246.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/logo.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tViewMyEvents" layoutX="28.0" layoutY="285.0" prefHeight="351.0" prefWidth="751.0">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="294.0" text="Title" />
+                <TableColumn fx:id="colDate" minWidth="9.0" prefWidth="119.0" text="Date" />
+                <TableColumn fx:id="colCity" prefWidth="148.0" text="City" />
+                <TableColumn fx:id="colHostName" prefWidth="189.0" text="Host" />
+                
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
